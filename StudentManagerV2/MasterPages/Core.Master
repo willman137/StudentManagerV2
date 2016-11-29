@@ -33,7 +33,7 @@
         Follow me on GitHUb Bruh
     </code>
     <asp:ContentPlaceHolder ID="Footer" runat="server">
-
+        <asp:Label ID="ErrorMSG" runat="server"/>
         </asp:ContentPlaceHolder>
 
 </footer>
