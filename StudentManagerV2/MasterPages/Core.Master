@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Core.master.cs" Inherits="StudentManager.MasterPages.Core" EnableTheming="True"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="EnrollStudent.aspx">Enroll</a></li>
+            <li><a href="ProgramFinder.aspx">Program Finder</a></li>
+            <li><a href="AddProgram.aspx">AddProgram</a></li>
+            <li><a href="ModifyStudent.aspx">Modify Student</a></li>
+            <li><a href="FindStudent.aspx">Find Student</a></li>
+            <li><a href="RemoveStudent.aspx">Remove Student</a></li>
+        </ul>
+    </nav>
+    <form id="form1" runat="server">
+    <div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <br/>
+<footer>   
+    <code>
+        Follow me on GitHUb Bruh
+    </code>
+    <asp:ContentPlaceHolder ID="Footer" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+</footer>
+
+</body>
+</html>
