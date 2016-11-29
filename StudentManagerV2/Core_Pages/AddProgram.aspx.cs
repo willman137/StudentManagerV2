@@ -13,7 +13,6 @@ namespace StudentManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void submit_Click(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace StudentManager
             }
             catch (SqlException ex)
             {
-                Response.Write("<script>alert(\"Did not add Program\")</script>");
+                Response.Write(ex.StackTrace);
             }
         }
     }
