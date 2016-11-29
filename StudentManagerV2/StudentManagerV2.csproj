@@ -89,6 +89,7 @@
     <Content Include="Core_Pages\RemoveStudent.aspx" />
     <Content Include="Core_Pages\XML_Reader.aspx" />
     <Content Include="Core_Pages\XML_Writer.aspx" />
+    <Content Include="MyWebService.asmx" />
     <Content Include="packages.config" />
     <Content Include="App_Themes\Operation\Operation.skin" />
     <Content Include="App_Themes\Query\Query.skin" />
@@ -195,6 +196,10 @@
     </Compile>
     <Compile Include="MasterPages\Core.Master.designer.cs">
       <DependentUpon>Core.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyWebService.asmx.cs">
+      <DependentUpon>MyWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
