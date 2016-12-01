@@ -16,6 +16,26 @@ namespace StudentManager.MasterPages
 
         }
 
+        protected void Locate_Student(object sender, EventArgs e) {
+            try
+            {
+                Student s = RequestDirector.FindStudent(target_student.Text);
+                if (s != null)
+                {
+                    details.Visible = true;
+                    Response.Write("<script>alert(\"Found the Queryed student\")</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert(\"Couldn't find the Queryed student\")</script>");
+                }
+            }
+            catch (SqlException ex)
+            {
+                Response.Write("<script>alert(\"Did not modify student, There was a backed error\")</script>");
+            }
+        }
+
         protected void ModifySubmit_Click(object sender, EventArgs e)
         {
             try
@@ -23,6 +43,7 @@ namespace StudentManager.MasterPages
                 Student s = RequestDirector.FindStudent(Student_ID.Text);
                 if (s != null)
                 {
+                    details.Visible = true;
                     s.FirstName = FirstName.Text;
                     s.LastName = LastName.Text;
                     s.Email = Email.Text;

@@ -9,7 +9,7 @@
 <body>
     <header>
     </header>
-    <nav>
+    <nav class="nav">
         <ul>
             <li><a href="EnrollStudent.aspx">Enroll</a></li>
             <li><a href="ProgramFinder.aspx">Program Finder</a></li>
@@ -19,8 +19,11 @@
             <li><a href="RemoveStudent.aspx">Remove Student</a></li>
         </ul>
     </nav>
+
+
     <form id="form1" runat="server">
     <div>
+
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Core.Master" AutoEventWireup="true" Theme="Operation" CodeBehind="ModifyStudent.aspx.cs" Inherits="StudentManager.MasterPages.ModifyStudent" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        Student ID <asp:TextBox runat="server" ID="Student_ID"></asp:TextBox>
+    <asp:panel runat="server" id="locator">
+        Student ID <asp:TextBox runat="server" class="form-control" ID="target_student"></asp:TextBox>
+        <br/>
+        <asp:Button runat="server" ID="Locator" Text="Find Student" OnClick="Locate_Student" />    
+    </asp:panel>
+    <br/>
+    <asp:panel runat="server" id="details" visible="false">
+        Student ID <asp:TextBox runat="server" class="form-control" ID="Student_ID"></asp:TextBox>
         <br/>
         Firstname <asp:TextBox runat="server" ID="FirstName"></asp:TextBox>
         <br/>
@@ -9,4 +16,6 @@
         Email <asp:TextBox runat="server" ID="Email"></asp:TextBox>
         <br/>
     <asp:Button runat="server" ID="ModifySubmit" Text="Modify" OnClick="ModifySubmit_Click" />
+    </asp:panel>
+
 </asp:Content>
