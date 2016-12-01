@@ -21,8 +21,14 @@ namespace StudentManager
             try
             {
                 Student s = RequestDirector.FindStudent(Student_ID.Text);
+                if (s != null)
+                {
+                    Response.Write("<script>alert(\"" + s.ProgramCode + " was found in the system\")");
 
-                Response.Write("<script>alert(\"" + s.ProgramCode + " was found in the system\")");
+                }
+                else {
+                    Response.Write("<script>alert(\"Student was not found in the system\")");
+                }
             }
             catch (SqlException ex)
             {

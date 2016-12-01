@@ -13,13 +13,13 @@ namespace StudentManager.MasterPages {
     public partial class ModifyStudent {
         
         /// <summary>
-        /// locator control.
+        /// locator_panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel locator;
+        protected global::System.Web.UI.WebControls.Panel locator_panel;
         
         /// <summary>
         /// target_student control.

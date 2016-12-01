@@ -60,12 +60,14 @@ namespace StudentManager.Classes
             SqlDataReader theDataReader;
             theDataReader = cmd.ExecuteReader();
 
-           while(theDataReader.HasRows)
+           if(theDataReader.Read())
             {
                 ret = new Student();
-                theDataReader.Read();
                 ret.StudentID = (String)theDataReader["StudentID"];
                 ret.ProgramCode = (String)theDataReader["ProgramCode"];
+                ret.Email = (String)theDataReader["Email"];
+                ret.FirstName = (String)theDataReader["FirstName"];
+                ret.LastName = (String)theDataReader["LastName"];
             }
 
             theConnection.Close();
